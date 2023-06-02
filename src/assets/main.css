@@ -1,0 +1,21 @@
+:root{
+    --c1: #83764F;
+    --c2: #A2A378;
+    --c3: #A0D8B3;
+    --c4: #E5F9DB;
+}
+
+@font-face {
+    font-family: "nunito";
+    src: url("Nunito-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: nunito;
+}
+
+body{
+    background-color: var(--c4);
+    overflow: hidden;
+    color: var(--fg);
+}
