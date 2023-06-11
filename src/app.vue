@@ -2,9 +2,10 @@
 import HeaderApp from './assets/header.vue'
 import Todo from './components/todo.vue'
 import HelloLog from './components/helloLog.vue'
+import weather from './components/weather.vue'
 import { ref } from 'vue'
 
-const page = ref('todo');
+const page = ref('');
 
 function changePage(value) {
     page.value = value;
@@ -17,6 +18,7 @@ function changePage(value) {
     <main>
         <HelloLog v-if="page === 'helloLog'"/>
         <todo v-if="page === 'todo'"/>
+        <weather v-if="page === 'weather'"/>
 
         <div v-if="page === ''" id="none">
             Please chose a page here ^
@@ -25,10 +27,6 @@ function changePage(value) {
 </template>
 
 <style scoped>
-    main{
-        margin-top: 3em;
-    }
-
     #none{
         position: absolute;
         right: 1vh;

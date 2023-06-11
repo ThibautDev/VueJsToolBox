@@ -6,6 +6,7 @@
         <div>
             <span @click="changePage('todo')">Todo</span>
             <span @click="changePage('helloLog')">HelloLog</span>
+            <span @click="changePage('weather')">Weather</span>
         </div>
     </header>
 </template>
@@ -26,8 +27,7 @@ header {
     color: var(--c4);
     background-color: var(--c3);
 
-    position: absolute;
-    inset: 0;
+    position: sticky;
     height: 2.5em;
 
     display: flex;
@@ -36,7 +36,7 @@ header {
 
 header > div{
     margin-block: auto;
-    margin-inline: 1vh;
+    margin-inline: 0.5em;
     font-variation-settings: 'wght' 700;
 }
 
@@ -45,7 +45,7 @@ header > div:first-child > span {
 }
 
 header > div:last-child > span{
-    padding-inline: 0.5vh;
+    padding-inline: 0.2em;
     margin-left: 3px;
     border-radius: 5px;
 
@@ -72,6 +72,5 @@ header > div:last-child > span:not(:hover){
         text-decoration: none;
     }
 }
-
 
 </style>
